@@ -2,6 +2,7 @@
 #   NB: pos= is required for these symbols to resolve searching 'upward' from data.table -- if these packages are not already attached,
 #   and we don't use pos=, they'll wind up 'below' data.table on the search() path --> their symbols won't resolve since, when running
 #   from the installed package, this is evaluated from data.table's namespace.
+options(useFancyQuotes = FALSE)
 if ("include.only" %in% names(formals(library))) { # TODO(R>=3.6.0): Remove this.
   libraryRobust = library
 } else {
