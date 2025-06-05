@@ -84,12 +84,8 @@ bmerge = function(i, x, icols, xcols, roll, rollends, nomatch, mult, ops, verbos
           next
         }
       }
-      condition_message <- sprintf(
-        "Incompatible join types: %s (%s) and %s (%s). Factor columns must join to factor or character columns.", # Exact match for tests like 2044.24
-        xname, x_merge_type,
-        iname, i_merge_type
-      )
-      condition <- structure(
+      condition_message = sprintf("Incompatible join types: %s (%s) and %s (%s). Factor columns must join to factor or character columns.", xname, x_merge_type, iname, i_merge_type)
+      condition = structure(
         list(
           message = condition_message,
           bmerge_x_arg_col_name      = names(x)[xcol],
